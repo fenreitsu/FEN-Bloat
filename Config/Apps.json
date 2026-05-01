@@ -1,0 +1,40 @@
+{
+  "Version": "1.0",
+  "Apps": {
+    "Essentials": [
+      { "Id": "Google.Chrome", "Name": "Google Chrome", "Desc": "Web browser" },
+      { "Id": "Mozilla.Firefox", "Name": "Mozilla Firefox", "Desc": "Web browser" },
+      { "Id": "7zip.7zip", "Name": "7-Zip", "Desc": "File archiver" },
+      { "Id": "Notepad++.Notepad++", "Name": "Notepad++", "Desc": "Code editor" },
+      { "Id": "Microsoft.PowerToys", "Name": "PowerToys", "Desc": "Windows utilities" },
+      { "Id": "Adobe.Acrobat.Reader.64-bit", "Name": "Adobe Reader", "Desc": "PDF viewer" }
+    ],
+    "Utilities": [
+      { "Id": "CPUID.CPU-Z", "Name": "CPU-Z", "Desc": "Hardware info" },
+      { "Id": "CrystalDewWorld.CrystalDiskInfo", "Name": "CrystalDiskInfo", "Desc": "Drive health" },
+      { "Id": "ShareX.ShareX", "Name": "ShareX", "Desc": "Screen capture" },
+      { "Id": "voidtools.Everything", "Name": "Everything", "Desc": "File search" },
+      { "Id": "Microsoft.WindowsTerminal", "Name": "Windows Terminal", "Desc": "Modern terminal" }
+    ],
+    "Gaming": [
+      { "Id": "Valve.Steam", "Name": "Steam", "Desc": "Game store" },
+      { "Id": "Discord.Discord", "Name": "Discord", "Desc": "Voice chat" },
+      { "Id": "OBSProject.OBSStudio", "Name": "OBS Studio", "Desc": "Streaming" },
+      { "Id": "Playnite.Playnite", "Name": "Playnite", "Desc": "Game launcher" }
+    ],
+    "DevTools": [
+      { "Id": "Microsoft.VisualStudioCode", "Name": "VS Code", "Desc": "Code editor" },
+      { "Id": "Git.Git", "Name": "Git", "Desc": "Version control" },
+      { "Id": "Python.Python.3.12", "Name": "Python 3.12", "Desc": "Programming language" },
+      { "Id": "Docker.DockerDesktop", "Name": "Docker Desktop", "Desc": "Containers" },
+      { "Id": "Microsoft.dotnet", "Name": ".NET SDK", "Desc": "Framework" }
+    ],
+    "Creative": [
+      { "Id": "GIMP.GIMP", "Name": "GIMP", "Desc": "Image editor" },
+      { "Id": "BlenderFoundation.Blender", "Name": "Blender", "Desc": "3D modeling" },
+      { "Id": "Audacity.Audacity", "Name": "Audacity", "Desc": "Audio editor" },
+      { "Id": "VideoLAN.VLC", "Name": "VLC Media Player", "Desc": "Media player" },
+      { "Id": "HandBrake.HandBrake", "Name": "HandBrake", "Desc": "Video transcoder" }
+    ]
+  }
+}

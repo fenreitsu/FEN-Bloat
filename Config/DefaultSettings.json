@@ -1,0 +1,30 @@
+{
+  "Version": "1.0",
+  "DefaultSettings": {
+    "Debloat": {
+      "DisableTelemetry": true,
+      "DisableBingSearch": true,
+      "DisableCopilot": true,
+      "DisableRecall": true,
+      "DisableWidgets": true,
+      "DisableGameBar": true,
+      "EnableDarkMode": true,
+      "ShowFileExt": true,
+      "DisableNotifications": true,
+      "DisableDeliveryOpt": true,
+      "EnableEndTask": true
+    },
+    "AppRemovalRecommended": [
+      "Microsoft.XboxApp", "Microsoft.XboxGameOverlay", "Microsoft.XboxGamingOverlay",
+      "Microsoft.XboxIdentityProvider", "Microsoft.XboxSpeechToTextOverlay", "Microsoft.Xbox.TCUI",
+      "Microsoft.SkypeApp", "Microsoft.BingWeather", "Microsoft.BingNews",
+      "Microsoft.GetHelp", "Microsoft.Getstarted", "Microsoft.Microsoft3DViewer",
+      "Microsoft.MicrosoftSolitaireCollection", "Microsoft.MSPaint", "Microsoft.People",
+      "Microsoft.PowerAutomateDesktop", "Microsoft.Print3D", "Microsoft.WindowsFeedbackHub",
+      "Microsoft.WindowsMaps", "Microsoft.ZuneMusic", "Microsoft.ZuneVideo",
+      "MicrosoftCorporationII.MicrosoftFamily", "Microsoft.549981C3F5F10",
+      "MicrosoftWindows.Client.WebExperience", "king.com.CandyCrushSaga",
+      "king.com.CandyCrushSodaSaga", "Clipchamp.Clipchamp"
+    ]
+  }
+}

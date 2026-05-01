@@ -1,0 +1,15 @@
+# Generated folders (runtime)
+Logs/
+Backups/
+Temp/
+
+# Debug / Testing files
+error*.txt
+session-*.md
+help-and-errors/
+
+# User state (generated at runtime)
+Config/LastUsed.json
+
+# Builds (use GitHub Releases instead)
+releases/

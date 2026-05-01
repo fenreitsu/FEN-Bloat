@@ -1,0 +1,20 @@
+{
+  "Version": "1.0",
+  "Features": [
+    { "FeatureId": "DisableTelemetry", "Action": "Disable", "Label": "Telemetry & Diagnostic Data", "Category": "Privacy", "ToolTip": "Stops Windows from sending diagnostic data to Microsoft" },
+    { "FeatureId": "DisableBingSearch", "Action": "Disable", "Label": "Bing Search in Windows Search", "Category": "Privacy", "ToolTip": "Removes Bing web results from Windows Search" },
+    { "FeatureId": "DisableWidgets", "Action": "Disable", "Label": "Widgets", "Category": "Privacy", "ToolTip": "Disables the Widgets panel on the taskbar" },
+    { "FeatureId": "DisableNotifications", "Action": "Disable", "Label": "Suggested Notifications", "Category": "Privacy", "ToolTip": "Stops Windows from showing suggested app notifications" },
+    { "FeatureId": "DisableThirdPartyBg", "Action": "Disable", "Label": "Third-party Background Apps", "Category": "Privacy", "ToolTip": "Prevents third-party apps from running in the background" },
+    { "FeatureId": "DisableDeliveryOpt", "Action": "Disable", "Label": "Delivery Optimization (P2P)", "Category": "Privacy", "ToolTip": "Stops Windows from sharing updates with other PCs" },
+    { "FeatureId": "DisableLockScreen", "Action": "Disable", "Label": "Lock Screen", "Category": "System", "ToolTip": "Disables the Windows lock screen" },
+    { "FeatureId": "DisableFastStartup", "Action": "Disable", "Label": "Fast Startup", "Category": "System", "ToolTip": "Disables fast startup for a full shutdown experience" },
+    { "FeatureId": "EnableEndTask", "Action": "Enable", "Label": "End Task in Taskbar", "Category": "System", "ToolTip": "Adds 'End Task' option to taskbar right-click menu" },
+    { "FeatureId": "EnableDarkMode", "Action": "Enable", "Label": "System Dark Mode", "Category": "Explorer", "ToolTip": "Enables dark mode for Windows and apps" },
+    { "FeatureId": "ShowFileExt", "Action": "Enable", "Label": "Show File Extensions", "Category": "Explorer", "ToolTip": "Shows file extensions for known file types in Explorer" },
+    { "FeatureId": "ClassicContextMenu", "Action": "Enable", "Label": "Classic Context Menu (Win10)", "Category": "Explorer", "ToolTip": "Restores the classic Windows 10 right-click menu" },
+    { "FeatureId": "DisableCopilot", "Action": "Disable", "Label": "Microsoft Copilot", "Category": "AI", "ToolTip": "Removes and disables Microsoft Copilot" },
+    { "FeatureId": "DisableRecall", "Action": "Disable", "Label": "Windows Recall", "Category": "AI", "ToolTip": "Disables the Windows Recall feature" },
+    { "FeatureId": "DisableGameBar", "Action": "Disable", "Label": "Xbox Game Bar & DVR", "Category": "Gaming", "ToolTip": "Disables Xbox Game Bar and game recording features" }
+  ]
+}
