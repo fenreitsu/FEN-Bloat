@@ -154,7 +154,7 @@ if (Test-Path $script:AppsFilePath) {
         foreach ($prop in $appsJson.Apps.PSObject.Properties) {
             $script:AvailableApps[$prop.Name] = @()
             foreach ($a in $prop.Value) {
-                $script:AvailableApps[$prop.Name] += @{ Id=$a.Id; Name=$a.Name; Category=$a.Desc }
+                $script:AvailableApps[$prop.Name] += @{ Id=$a.Id; Name=$a.Name; Desc=$a.Desc; VersionUrl=$(if($a.VersionUrl){$a.VersionUrl}else{""}) }
             }
         }
     } catch { $script:AvailableApps = @{} }
@@ -194,6 +194,11 @@ if (Test-Path $script:AppsFilePath) {
             @{Id="Audacity.Audacity";Name="Audacity";Category="Audio"},
             @{Id="VideoLAN.VLC";Name="VLC Media Player";Category="Media"},
             @{Id="HandBrake.HandBrake";Name="HandBrake";Category="Video"}
+        )
+        Social = @(
+            @{Id="Discord.Discord";Name="Discord";Category="Chat"},
+            @{Id="Zoom.Zoom";Name="Zoom";Category="Meetings"},
+            @{Id="SlackTechnologies.Slack";Name="Slack";Category="Chat"}
         )
     }
 }

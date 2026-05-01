@@ -1,3 +1,10 @@
+function Remove-BloatwareApps {
+    param([string[]]$AppNames)
+    foreach ($name in $AppNames) {
+        try { Remove-FBAppxPackage -PackageName $name -AllUsers } catch { }
+    }
+}
+
 function Remove-FBAppxPackage {
     param([string]$PackageName, [switch]$AllUsers)
     try {

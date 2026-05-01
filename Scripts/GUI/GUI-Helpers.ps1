@@ -70,13 +70,10 @@ function Add-WPFCheckboxToPanel {
     $cb.Name = $safeName
     $cb.SetValue([System.Windows.Automation.AutomationProperties]::NameProperty, $Text)
     if ($ToolTipText) {
-        $tb = New-Object System.Windows.Controls.TextBlock
-        $tb.Text = $ToolTipText
-        $tb.TextWrapping = "Wrap"
-        $cb.ToolTip = $tb
+        $cb.ToolTip = $ToolTipText
     }
     $panel.Children.Add($cb) | Out-Null
-    $window.RegisterName($cb.Name, $cb)
+    try { $window.RegisterName($cb.Name, $cb) } catch { }
     return $cb
 }
 

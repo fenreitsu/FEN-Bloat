@@ -2,39 +2,44 @@
   "Version": "1.0",
   "Apps": {
     "Essentials": [
-      { "Id": "Google.Chrome", "Name": "Google Chrome", "Desc": "Web browser" },
-      { "Id": "Mozilla.Firefox", "Name": "Mozilla Firefox", "Desc": "Web browser" },
-      { "Id": "7zip.7zip", "Name": "7-Zip", "Desc": "File archiver" },
-      { "Id": "Notepad++.Notepad++", "Name": "Notepad++", "Desc": "Code editor" },
-      { "Id": "Microsoft.PowerToys", "Name": "PowerToys", "Desc": "Windows utilities" },
-      { "Id": "Adobe.Acrobat.Reader.64-bit", "Name": "Adobe Reader", "Desc": "PDF viewer" }
+      { "Id": "Google.Chrome", "Name": "Google Chrome", "Desc": "Web browser", "VersionUrl": "https://www.google.com/chrome/" },
+      { "Id": "Mozilla.Firefox", "Name": "Mozilla Firefox", "Desc": "Web browser", "VersionUrl": "https://www.mozilla.org/firefox/" },
+      { "Id": "7zip.7zip", "Name": "7-Zip", "Desc": "File archiver", "VersionUrl": "https://www.7-zip.org/" },
+      { "Id": "Notepad++.Notepad++", "Name": "Notepad++", "Desc": "Code editor", "VersionUrl": "https://notepad-plus-plus.org/downloads/" },
+      { "Id": "Microsoft.PowerToys", "Name": "PowerToys", "Desc": "Windows utilities", "VersionUrl": "https://github.com/microsoft/PowerToys/releases" },
+      { "Id": "Adobe.Acrobat.Reader.64-bit", "Name": "Adobe Reader", "Desc": "PDF viewer", "VersionUrl": "https://get.adobe.com/reader/" }
     ],
     "Utilities": [
-      { "Id": "CPUID.CPU-Z", "Name": "CPU-Z", "Desc": "Hardware info" },
-      { "Id": "CrystalDewWorld.CrystalDiskInfo", "Name": "CrystalDiskInfo", "Desc": "Drive health" },
-      { "Id": "ShareX.ShareX", "Name": "ShareX", "Desc": "Screen capture" },
-      { "Id": "voidtools.Everything", "Name": "Everything", "Desc": "File search" },
-      { "Id": "Microsoft.WindowsTerminal", "Name": "Windows Terminal", "Desc": "Modern terminal" }
+      { "Id": "CPUID.CPU-Z", "Name": "CPU-Z", "Desc": "Hardware info", "VersionUrl": "https://www.cpuid.com/softwares/cpu-z.html" },
+      { "Id": "CrystalDewWorld.CrystalDiskInfo", "Name": "CrystalDiskInfo", "Desc": "Drive health", "VersionUrl": "https://crystalmark.info/en/software/crystaldiskinfo/" },
+      { "Id": "ShareX.ShareX", "Name": "ShareX", "Desc": "Screen capture", "VersionUrl": "https://getsharex.com/" },
+      { "Id": "voidtools.Everything", "Name": "Everything", "Desc": "File search", "VersionUrl": "https://www.voidtools.com/downloads/" },
+      { "Id": "Microsoft.WindowsTerminal", "Name": "Windows Terminal", "Desc": "Modern terminal", "VersionUrl": "https://github.com/microsoft/terminal/releases" }
     ],
     "Gaming": [
-      { "Id": "Valve.Steam", "Name": "Steam", "Desc": "Game store" },
-      { "Id": "Discord.Discord", "Name": "Discord", "Desc": "Voice chat" },
-      { "Id": "OBSProject.OBSStudio", "Name": "OBS Studio", "Desc": "Streaming" },
-      { "Id": "Playnite.Playnite", "Name": "Playnite", "Desc": "Game launcher" }
+      { "Id": "Valve.Steam", "Name": "Steam", "Desc": "Game store", "VersionUrl": "https://store.steampowered.com/about/" },
+      { "Id": "Discord.Discord", "Name": "Discord", "Desc": "Voice chat", "VersionUrl": "https://discord.com/download" },
+      { "Id": "OBSProject.OBSStudio", "Name": "OBS Studio", "Desc": "Streaming", "VersionUrl": "https://obsproject.com/download" },
+      { "Id": "Playnite.Playnite", "Name": "Playnite", "Desc": "Game launcher", "VersionUrl": "https://playnite.link/" }
     ],
     "DevTools": [
-      { "Id": "Microsoft.VisualStudioCode", "Name": "VS Code", "Desc": "Code editor" },
-      { "Id": "Git.Git", "Name": "Git", "Desc": "Version control" },
-      { "Id": "Python.Python.3.12", "Name": "Python 3.12", "Desc": "Programming language" },
-      { "Id": "Docker.DockerDesktop", "Name": "Docker Desktop", "Desc": "Containers" },
-      { "Id": "Microsoft.dotnet", "Name": ".NET SDK", "Desc": "Framework" }
+      { "Id": "Microsoft.VisualStudioCode", "Name": "VS Code", "Desc": "Code editor", "VersionUrl": "https://code.visualstudio.com/" },
+      { "Id": "Git.Git", "Name": "Git", "Desc": "Version control", "VersionUrl": "https://git-scm.com/downloads" },
+      { "Id": "Python.Python.3", "Name": "Python", "Desc": "Programming language", "VersionUrl": "https://www.python.org/downloads/" },
+      { "Id": "Docker.DockerDesktop", "Name": "Docker Desktop", "Desc": "Containers", "VersionUrl": "https://www.docker.com/products/docker-desktop/" },
+      { "Id": "Microsoft.DotNet.SDK", "Name": ".NET SDK", "Desc": "Framework", "VersionUrl": "https://dotnet.microsoft.com/download" }
     ],
     "Creative": [
-      { "Id": "GIMP.GIMP", "Name": "GIMP", "Desc": "Image editor" },
-      { "Id": "BlenderFoundation.Blender", "Name": "Blender", "Desc": "3D modeling" },
-      { "Id": "Audacity.Audacity", "Name": "Audacity", "Desc": "Audio editor" },
-      { "Id": "VideoLAN.VLC", "Name": "VLC Media Player", "Desc": "Media player" },
-      { "Id": "HandBrake.HandBrake", "Name": "HandBrake", "Desc": "Video transcoder" }
+      { "Id": "GIMP.GIMP", "Name": "GIMP", "Desc": "Image editor", "VersionUrl": "https://www.gimp.org/downloads/" },
+      { "Id": "BlenderFoundation.Blender", "Name": "Blender", "Desc": "3D modeling", "VersionUrl": "https://www.blender.org/download/" },
+      { "Id": "Audacity.Audacity", "Name": "Audacity", "Desc": "Audio editor", "VersionUrl": "https://www.audacityteam.org/download/" },
+      { "Id": "VideoLAN.VLC", "Name": "VLC Media Player", "Desc": "Media player", "VersionUrl": "https://www.videolan.org/vlc/" },
+      { "Id": "HandBrake.HandBrake", "Name": "HandBrake", "Desc": "Video transcoder", "VersionUrl": "https://handbrake.fr/downloads.php" }
+    ],
+    "Social": [
+      { "Id": "Discord.Discord", "Name": "Discord", "Desc": "Voice chat", "VersionUrl": "https://discord.com/download" },
+      { "Id": "Zoom.Zoom", "Name": "Zoom", "Desc": "Video meetings", "VersionUrl": "https://zoom.us/download" },
+      { "Id": "SlackTechnologies.Slack", "Name": "Slack", "Desc": "Team messaging", "VersionUrl": "https://slack.com/downloads" }
     ]
   }
 }

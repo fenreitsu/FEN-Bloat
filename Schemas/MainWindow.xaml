@@ -87,137 +87,9 @@
                         </Style>
                     </TabControl.Resources>
 
-                    <!-- ==================== TAB: Debloat ==================== -->
-                    <TabItem Header="Debloat" x:Name="TabDebloat">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-
-                            <!-- Tab Header -->
-                            <StackPanel Grid.Row="0" Margin="24,16,24,8">
-                                <TextBlock Text="Debloat" FontSize="22" FontWeight="Bold" Foreground="{DynamicResource FgColor}"/>
-                                <TextBlock Text="Select apps to remove and privacy features to disable" FontSize="13" Foreground="{DynamicResource FgColor}" Opacity="0.7" Margin="0,2,0,8"/>
-                            </StackPanel>
-
-                            <!-- Scrollable content with 3 columns -->
-                            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="24,0,24,0">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-
-                                    <!-- Col 0, Row 0: App Removal -->
-                                    <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE74C;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="App Removal" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
-                                            </StackPanel>
-                                            <StackPanel x:Name="AppRemovalPanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
-
-                                    <!-- Col 1, Row 0: Privacy -->
-                                    <Border Grid.Column="1" Grid.Row="0" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="Privacy &amp; Telemetry" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
-                                            </StackPanel>
-                                            <StackPanel x:Name="PrivacyPanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
-
-                                    <!-- Col 2, Row 0: AI Features -->
-                                    <Border Grid.Column="2" Grid.Row="0" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE90A;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="AI Features" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
-                                            </StackPanel>
-                                            <StackPanel x:Name="AIPanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
-
-                                    <!-- Col 0, Row 1: Interface -->
-                                    <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE774;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="Interface" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
-                                            </StackPanel>
-                                            <StackPanel x:Name="InterfacePanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
-
-                                    <!-- Col 1, Row 1: Gaming -->
-                                    <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE7FC;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="Gaming" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
-                                            </StackPanel>
-                                            <StackPanel x:Name="GamingPanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
-
-                                    <!-- Col 2, Row 1: System -->
-                                    <Border Grid.Column="2" Grid.Row="1" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="System" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
-                                            </StackPanel>
-                                            <StackPanel x:Name="SystemPanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
-                                </Grid>
-                            </ScrollViewer>
-
-                            <!-- Bottom action bar -->
-                            <Border Grid.Row="2" Background="{DynamicResource CardBgColor}" BorderBrush="{DynamicResource BorderColor}" BorderThickness="0,1,0,0" Padding="24,12">
-                                <StackPanel Orientation="Horizontal">
-                                    <Button x:Name="DebloatApplyBtn" Content="Apply Selected" Style="{StaticResource PrimaryButtonStyle}" Width="160" Height="40" FontSize="15"/>
-                                    <Button x:Name="DebloatSelectAllBtn" Content="Select All" Style="{StaticResource SecondaryButtonStyle}" Width="110" Height="40" Margin="12,0,0,0"/>
-                                    <Button x:Name="DebloatSelectRecommendedBtn" Content="Recommended" Style="{StaticResource SecondaryButtonStyle}" Width="130" Height="40" Margin="8,0,0,0"/>
-                                    <TextBlock x:Name="DebloatStatusText" Text="" VerticalAlignment="Center" Margin="16,0,0,0" Foreground="{DynamicResource FgColor}" Opacity="0.7"/>
-                                </StackPanel>
-                            </Border>
-                        </Grid>
-                    </TabItem>
-
                     <!-- ==================== TAB: Install ==================== -->
                     <TabItem Header="Install" x:Name="TabInstall">
-                        <Grid>
+                        <Grid Margin="0,0,0,48">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
@@ -225,11 +97,11 @@
                             </Grid.RowDefinitions>
 
                             <StackPanel Grid.Row="0" Margin="24,16,24,8">
-                                <TextBlock Text="Install Applications" FontSize="22" FontWeight="Bold" Foreground="{DynamicResource FgColor}"/>
-                                <TextBlock Text="Install useful programs via WinGet" FontSize="13" Foreground="{DynamicResource FgColor}" Opacity="0.7" Margin="0,2,0,8"/>
+                                <TextBlock Text="Install &amp; Remove Apps" FontSize="22" FontWeight="Bold" Foreground="{DynamicResource FgColor}"/>
+                                <TextBlock Text="Install software or remove pre-installed bloatware" FontSize="13" Foreground="{DynamicResource FgColor}" Opacity="0.7" Margin="0,2,0,8"/>
                             </StackPanel>
 
-                            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="24,0,24,0">
+                            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="24,0,24,0">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
@@ -239,12 +111,14 @@
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
 
+                                    <!-- Row 0 -->
                                     <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource CategoryCardBorderStyle}">
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE774;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                <TextBlock Text="&#xE774;" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Margin="0,0,6,0" FontSize="16"/>
                                                 <TextBlock Text="Essentials" Style="{StaticResource CategoryHeaderTextBlock}"/>
                                             </StackPanel>
                                             <StackPanel x:Name="InstallEssentialsPanel" Orientation="Vertical"/>
@@ -254,7 +128,7 @@
                                     <Border Grid.Column="1" Grid.Row="0" Style="{StaticResource CategoryCardBorderStyle}">
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE90F;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                <TextBlock Text="&#xE90F;" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Margin="0,0,6,0" FontSize="16"/>
                                                 <TextBlock Text="Utilities" Style="{StaticResource CategoryHeaderTextBlock}"/>
                                             </StackPanel>
                                             <StackPanel x:Name="InstallUtilitiesPanel" Orientation="Vertical"/>
@@ -264,17 +138,18 @@
                                     <Border Grid.Column="2" Grid.Row="0" Style="{StaticResource CategoryCardBorderStyle}">
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE7FC;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="Gaming" Style="{StaticResource CategoryHeaderTextBlock}"/>
+                                                <TextBlock Text="&#xE7FC;" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Margin="0,0,6,0" FontSize="16"/>
+                                                <TextBlock Text="Gaming &amp; Xbox" Style="{StaticResource CategoryHeaderTextBlock}"/>
                                             </StackPanel>
                                             <StackPanel x:Name="InstallGamingPanel" Orientation="Vertical"/>
                                         </StackPanel>
                                     </Border>
 
+                                    <!-- Row 1 -->
                                     <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource CategoryCardBorderStyle}">
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE97F;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                <TextBlock Text="&#xE97F;" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Margin="0,0,6,0" FontSize="16"/>
                                                 <TextBlock Text="Dev Tools" Style="{StaticResource CategoryHeaderTextBlock}"/>
                                             </StackPanel>
                                             <StackPanel x:Name="InstallDevPanel" Orientation="Vertical"/>
@@ -284,10 +159,51 @@
                                     <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource CategoryCardBorderStyle}">
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE8B9;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="Creative" Style="{StaticResource CategoryHeaderTextBlock}"/>
+                                                <TextBlock Text="&#xE8B9;" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Margin="0,0,6,0" FontSize="16"/>
+                                                <TextBlock Text="Creative &amp; Media" Style="{StaticResource CategoryHeaderTextBlock}"/>
                                             </StackPanel>
                                             <StackPanel x:Name="InstallCreativePanel" Orientation="Vertical"/>
+                                        </StackPanel>
+                                    </Border>
+
+                                    <Border Grid.Column="2" Grid.Row="1" Style="{StaticResource CategoryCardBorderStyle}">
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="&#xE902;" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Margin="0,0,6,0" FontSize="16"/>
+                                                <TextBlock Text="Social &amp; Communication" Style="{StaticResource CategoryHeaderTextBlock}"/>
+                                            </StackPanel>
+                                            <StackPanel x:Name="InstallSocialPanel" Orientation="Vertical"/>
+                                        </StackPanel>
+                                    </Border>
+
+                                    <!-- Row 2 -->
+                                    <Border Grid.Column="0" Grid.Row="2" Style="{StaticResource CategoryCardBorderStyle}">
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Margin="0,0,6,0" FontSize="16"/>
+                                                <TextBlock Text="Microsoft Apps" Style="{StaticResource CategoryHeaderTextBlock}"/>
+                                            </StackPanel>
+                                            <StackPanel x:Name="InstallMicrosoftPanel" Orientation="Vertical"/>
+                                        </StackPanel>
+                                    </Border>
+
+                                    <Border Grid.Column="1" Grid.Row="2" Style="{StaticResource CategoryCardBorderStyle}">
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="&#xE918;" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Margin="0,0,6,0" FontSize="16"/>
+                                                <TextBlock Text="Productivity &amp; Cloud" Style="{StaticResource CategoryHeaderTextBlock}"/>
+                                            </StackPanel>
+                                            <StackPanel x:Name="InstallProductivityPanel" Orientation="Vertical"/>
+                                        </StackPanel>
+                                    </Border>
+
+                                    <Border Grid.Column="2" Grid.Row="2" Style="{StaticResource CategoryCardBorderStyle}">
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="&#xE7FC;" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Margin="0,0,6,0" FontSize="16"/>
+                                                <TextBlock Text="Games" Style="{StaticResource CategoryHeaderTextBlock}"/>
+                                            </StackPanel>
+                                            <StackPanel x:Name="InstallGamesPanel" Orientation="Vertical"/>
                                         </StackPanel>
                                     </Border>
                                 </Grid>
@@ -295,8 +211,36 @@
 
                             <Border Grid.Row="2" Background="{DynamicResource CardBgColor}" BorderBrush="{DynamicResource BorderColor}" BorderThickness="0,1,0,0" Padding="24,12">
                                 <StackPanel Orientation="Horizontal">
-                                    <Button x:Name="InstallApplyBtn" Content="Install Selected" Style="{StaticResource PrimaryButtonStyle}" Width="160" Height="40" FontSize="15"/>
-                                    <Button x:Name="InstallUpdateAllBtn" Content="Update All" Style="{StaticResource SecondaryButtonStyle}" Width="120" Height="40" Margin="12,0,0,0"/>
+                                    <Button x:Name="InstallUpgradeBtn" Style="{StaticResource PrimaryButtonStyle}" Width="210" Height="40" Margin="12,0,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE896;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Install / Upgrade Apps" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button x:Name="InstallUpdateAllBtn" Style="{StaticResource WarningButtonStyle}" Width="140" Height="40" Margin="12,0,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE895;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Upgrade All" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button x:Name="UninstallAppsBtn" Style="{StaticResource DangerButtonStyle}" Width="170" Height="40" Margin="12,0,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE74D;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Uninstall Selected" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button x:Name="InstallRemoveBtn" Style="{StaticResource SecondaryButtonStyle}" Width="180" Height="40" Margin="12,0,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE945;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Remove Needless Apps" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button x:Name="InstallUnselectAllBtn" Style="{StaticResource SecondaryButtonStyle}" Width="130" Height="40" Margin="12,0,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE894;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Unselect All" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
                                     <TextBlock x:Name="InstallStatusText" Text="" VerticalAlignment="Center" Margin="16,0,0,0" Foreground="{DynamicResource FgColor}" Opacity="0.7"/>
                                 </StackPanel>
                             </Border>
@@ -305,7 +249,7 @@
 
                     <!-- ==================== TAB: Tweaks ==================== -->
                     <TabItem Header="Tweaks" x:Name="TabTweaks">
-                        <Grid>
+                        <Grid Margin="0,0,0,48">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
@@ -314,91 +258,74 @@
 
                             <StackPanel Grid.Row="0" Margin="24,16,24,8">
                                 <TextBlock Text="Tweaks" FontSize="22" FontWeight="Bold" Foreground="{DynamicResource FgColor}"/>
-                                <TextBlock Text="Advanced system tweaks and optimizations" FontSize="13" Foreground="{DynamicResource FgColor}" Opacity="0.7" Margin="0,2,0,8"/>
+                                <TextBlock Text="Privacy, AI, System and UI customizations" FontSize="13" Foreground="{DynamicResource FgColor}" Opacity="0.7" Margin="0,2,0,8"/>
                             </StackPanel>
 
                             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="24,0,24,0">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-
-                                    <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="Privacy" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
+                                <StackPanel>
+                                    <WrapPanel>
+                                        <!-- Privacy & AI -->
+                                        <Border Style="{StaticResource CategoryCardBorderStyle}" Width="300">
+                                            <StackPanel>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                    <TextBlock Text="Privacy &amp; AI" Style="{StaticResource CategoryHeaderTextBlock}"/>
+                                                </StackPanel>
+                                                <StackPanel x:Name="PrivacyAIPanel" Orientation="Vertical"/>
                                             </StackPanel>
-                                            <StackPanel x:Name="TweaksPrivacyPanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
+                                        </Border>
 
-                                    <Border Grid.Column="1" Grid.Row="0" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="System" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
+                                        <!-- System & UI -->
+                                        <Border Style="{StaticResource CategoryCardBorderStyle}" Width="300">
+                                            <StackPanel>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                    <TextBlock Text="System &amp; UI" Style="{StaticResource CategoryHeaderTextBlock}"/>
+                                                </StackPanel>
+                                                <StackPanel x:Name="SystemUIPanel" Orientation="Vertical"/>
                                             </StackPanel>
-                                            <StackPanel x:Name="TweaksSystemPanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
+                                        </Border>
 
-                                    <Border Grid.Column="2" Grid.Row="0" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE774;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="Explorer" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
+                                        <!-- Notifications & Taskbar -->
+                                        <Border Style="{StaticResource CategoryCardBorderStyle}" Width="300">
+                                            <StackPanel>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xE8F1;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                    <TextBlock Text="Notifications &amp; Taskbar" Style="{StaticResource CategoryHeaderTextBlock}"/>
+                                                </StackPanel>
+                                                <StackPanel x:Name="NotifTaskbarPanel" Orientation="Vertical"/>
                                             </StackPanel>
-                                            <StackPanel x:Name="TweaksExplorerPanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
-
-                                    <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE90A;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="AI" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
-                                            </StackPanel>
-                                            <StackPanel x:Name="TweaksAIPanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
-
-                                    <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource CategoryCardBorderStyle}">
-                                        <StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="&#xE774;" FontFamily="Segoe Fluent Icons" FontSize="19" Foreground="{DynamicResource FgColor}" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                                                <TextBlock Text="Taskbar" Style="{StaticResource CategoryHeaderTextBlock}"/>
-                                                <Button ToolTip="More info" Style="{StaticResource CategoryHelpLinkButtonStyle}">
-                                                    <TextBlock Text="(?)" Style="{StaticResource CategoryHelpLinkTextStyle}"/>
-                                                </Button>
-                                            </StackPanel>
-                                            <StackPanel x:Name="TweaksTaskbarPanel" Orientation="Vertical"/>
-                                        </StackPanel>
-                                    </Border>
-                                </Grid>
+                                        </Border>
+                                    </WrapPanel>
+                                </StackPanel>
                             </ScrollViewer>
 
                             <Border Grid.Row="2" Background="{DynamicResource CardBgColor}" BorderBrush="{DynamicResource BorderColor}" BorderThickness="0,1,0,0" Padding="24,12">
                                 <StackPanel Orientation="Horizontal">
-                                    <Button x:Name="TweaksApplyBtn" Content="Apply Tweaks" Style="{StaticResource PrimaryButtonStyle}" Width="160" Height="40" FontSize="15"/>
+                                    <Button x:Name="TweaksRecommendedBtn" Style="{StaticResource SecondaryButtonStyle}" Width="140" Height="40" Margin="12,0,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE932;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Recommended" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button x:Name="TweaksSelectAllBtn" Style="{StaticResource SecondaryButtonStyle}" Width="120" Height="40" Margin="8,0,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE934;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Select All" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button x:Name="TweaksUnselectAllBtn" Style="{StaticResource SecondaryButtonStyle}" Width="120" Height="40" Margin="8,0,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE935;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Unselect All" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button x:Name="TweaksApplyBtn" Style="{StaticResource PrimaryButtonStyle}" Width="160" Height="40" Margin="12,0,0,0" FontSize="15">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE74E;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                            <TextBlock Text="Apply Selected" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
                                     <TextBlock x:Name="TweaksStatusText" Text="" VerticalAlignment="Center" Margin="16,0,0,0" Foreground="{DynamicResource FgColor}" Opacity="0.7"/>
                                 </StackPanel>
                             </Border>
@@ -407,7 +334,7 @@
 
                     <!-- ==================== TAB: Tools ==================== -->
                     <TabItem Header="Tools" x:Name="TabTools">
-                        <Grid>
+                        <Grid Margin="0,0,0,48">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
@@ -420,25 +347,54 @@
 
                             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="24,0,24,0">
                                 <StackPanel>
-                                    <!-- Row of tool buttons -->
                                     <WrapPanel>
                                         <Border Style="{StaticResource CategoryCardBorderStyle}" Width="300">
-                                            <Button x:Name="ToolRepairWU" Content="&#xE770;  Repair Windows Update" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left"/>
+                                            <Button x:Name="ToolRepairWU" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xE770;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                    <TextBlock Text="Repair Windows Update" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
                                         </Border>
                                         <Border Style="{StaticResource CategoryCardBorderStyle}" Width="300">
-                                            <Button x:Name="ToolSFC" Content="&#xE946;  Run SFC &amp; DISM" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left"/>
+                                            <Button x:Name="ToolSFC" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xE946;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                    <TextBlock Text="Run SFC &amp; DISM" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
                                         </Border>
                                         <Border Style="{StaticResource CategoryCardBorderStyle}" Width="300">
-                                            <Button x:Name="ToolCleanTemp" Content="&#xE74D;  Clean Temporary Files" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left"/>
+                                            <Button x:Name="ToolCleanTemp" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xE74D;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                    <TextBlock Text="Clean Temporary Files" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
                                         </Border>
                                         <Border Style="{StaticResource CategoryCardBorderStyle}" Width="300">
-                                            <Button x:Name="ToolRestorePoint" Content="&#xE74C;  Create Restore Point" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left"/>
+                                            <Button x:Name="ToolRestorePoint" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xE74C;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                    <TextBlock Text="Create Restore Point" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
                                         </Border>
                                         <Border Style="{StaticResource CategoryCardBorderStyle}" Width="300">
-                                            <Button x:Name="ToolMicroWin" Content="&#xE74E;  MicroWin (ISO Creator)" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left"/>
+                                            <Button x:Name="ToolMicroWin" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xE74E;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                    <TextBlock Text="MicroWin (ISO Creator)" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
                                         </Border>
                                         <Border Style="{StaticResource CategoryCardBorderStyle}" Width="300">
-                                            <Button x:Name="ToolOpenLogs" Content="&#xF000;  Open Logs Folder" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left"/>
+                                            <Button x:Name="ToolOpenLogs" Style="{StaticResource SecondaryButtonStyle}" Width="268" Height="50" FontSize="14" HorizontalAlignment="Left">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xF000;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                                    <TextBlock Text="Open Logs Folder" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Button>
                                         </Border>
                                     </WrapPanel>
                                 </StackPanel>
