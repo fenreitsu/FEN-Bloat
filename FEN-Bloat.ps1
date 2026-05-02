@@ -273,6 +273,11 @@ if (-not (Test-FBAdministrator)) {
 
 Write-FBLog "=== FEN-Bloat v$($script:Version) started ===" -Level INFO -Module CORE
 Write-FBLog "User: $env:USERNAME | PC: $env:COMPUTERNAME" -Level INFO -Module CORE
+$iconPath = Join-Path $script:BasePath "assets\fenreitsu-cli-icon.txt"
+if (Test-Path $iconPath) {
+    $icon = Get-Content $iconPath -Raw
+    Write-Host $icon -ForegroundColor Cyan
+}
 
 # Verify required files exist
 $requiredFiles = @($script:MainWindowSchema, $script:SharedStylesSchema)
